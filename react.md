@@ -309,5 +309,15 @@ Inicializálunk egy projektet: **npm init -y**
 
 Telepítjük a szükséges csomagokat: **npm install express sqlite3**
 
+A könnyebb kezelhetősége miatt telepítjük a nodemon-t: **npm install --save-dev nodemon**
+
 Ne feledjük hozzáadni az adatbázis fájl a projekthez!
+
+A package.json-ba ezt tegyük a scripts-hez:
+```js
+"scripts": {
+   "start": "nodemon index.js"
+  }
+```
+
 
