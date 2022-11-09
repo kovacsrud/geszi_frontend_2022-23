@@ -363,3 +363,6 @@ app.post('/kutyafajtak',(req,res)=>{
     })
 })
 ```
+## React frontend létrehozása
+
+**npx create-react-app .** -Ezzel az aktuálisan beállított mappába kerül a react app.
