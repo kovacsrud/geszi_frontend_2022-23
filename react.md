@@ -283,5 +283,8 @@ Nem csak stílusokat, hanem Bootstrap ikonokat is használhatunk, ebben az esetb
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 ```
+## JSON server telepítése
 
+Hozzunk létre egy mappát a json servernek és nyissunk hozzá egy terminált.
+Inicializálunk egy projektet a következő paranccsal: **npm init -y**
 
