@@ -320,4 +320,46 @@ A package.json-ba ezt tegyük a scripts-hez:
   }
 ```
 
+A kiszolgáló kódja a következő:
+```js
+//csomagok betöltése
+const express=require('express');
+const app=express();
+const sqlite3=require('sqlite3');
+//adatbázisfájl kiválasztása
+const db=new sqlite3.Database('./kutyak.db');
 
+//json adatok fogadásához szükséges
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+//a kiszolgáló a 8000-es porton figyeli a kéréseket
+app.listen(8000,()=>{console.log("Fut a szerver")});
+
+//a rest api kiszolgálónk végpontjai
+app.get('/',(req,res)=>{
+    res.send("Kutya adatbázis");
+});
+
+app.get('/kutyafajtak',(req,res)=>{
+    db.all("select * from kutyafajtak",(err,rows)=>{
+        if(err){
+            res.status(400).send(err);
+        } else {
+            res.status(200).json(rows);
+        }
+    })
+});
+
+app.post('/kutyafajtak',(req,res)=>{
+    console.log(req.body);
+    db.run("insert into kutyafajtak (nev,eredetinev) values(?,?)"
+    ,[req.body.nev,req.body.eredetinev],(err)=>{
+        if(err){
+            res.status(400).send(err);
+        } else {
+            res.status(200).json({message:"Adat beszúrva!"})
+        }
+    })
+})
+```
