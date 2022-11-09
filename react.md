@@ -286,5 +286,19 @@ Nem csak stílusokat, hanem Bootstrap ikonokat is használhatunk, ebben az esetb
 ## JSON server telepítése
 
 Hozzunk létre egy mappát a json servernek és nyissunk hozzá egy terminált.
+
 Inicializálunk egy projektet a következő paranccsal: **npm init -y**
+
+Telepítjük a JSON Server alkalmazást: **npm install json-server**
+
+Nyissuk meg a package.json-t keressük meg a scripts objektumot. A test kulcs és a hozzá tartozó érték törölhető.
+
+Írjuk be a scripts objektumba: "start": "json-server --watch db.json --port 8000"
+
+Így kell most a scripts objektumnak kinéznie:
+```js
+"scripts": {
+    "start": "json-server --watch db.json --port 8000"
+  }
+```
 
