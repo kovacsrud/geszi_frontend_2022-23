@@ -301,4 +301,13 @@ Nyissuk meg a package.json-t keressük meg a scripts objektumot. A test kulcs é
     "start": "json-server --watch db.json --port 8000"
   }
 ```
+A végpontok tesztelését valamilyen REST API eszköz segítségével (pl. POSTMAN, INSOMNIA, THUNDER CLIENT) 
+
+## Egyszerű SQL adatbázisos backend készítése
+
+Inicializálunk egy projektet: **npm init -y**
+
+Telepítjük a szükséges csomagokat: **npm install express sqlite3**
+
+Ne feledjük hozzáadni az adatbázis fájl a projekthez!
 
