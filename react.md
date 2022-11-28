@@ -368,6 +368,7 @@ A kiszolgáló kódja a következő:
 ```js
 //csomagok betöltése
 const express=require('express');
+const cors=require('cors');
 const app=express();
 const sqlite3=require('sqlite3');
 //adatbázisfájl kiválasztása
@@ -375,7 +376,11 @@ const db=new sqlite3.Database('./kutyak.db');
 
 //json adatok fogadásához szükséges
 app.use(express.json());
+//url-ben érkező adatok feldolgozásához szükséges
 app.use(express.urlencoded({extended:true}));
+//Cors- Crossorigin Resource Sharing problémamentes kezeléséhez szükséges. Ennek hiányában a böngésző letiltja a nem azonos
+//eredettel rendelkező kéréseket.
+app.use(cors());
 
 //a kiszolgáló a 8000-es porton figyeli a kéréseket
 app.listen(8000,()=>{console.log("Fut a szerver")});
@@ -385,6 +390,7 @@ app.get('/',(req,res)=>{
     res.send("Kutya adatbázis");
 });
 
+//adatlekérés kiszolgálása
 app.get('/kutyafajtak',(req,res)=>{
     db.all("select * from kutyafajtak",(err,rows)=>{
         if(err){
@@ -395,6 +401,7 @@ app.get('/kutyafajtak',(req,res)=>{
     })
 });
 
+//érkező adat fogadása, feldolgozása, adatbázisba illesztése
 app.post('/kutyafajtak',(req,res)=>{
     console.log(req.body);
     db.run("insert into kutyafajtak (nev,eredetinev) values(?,?)"
