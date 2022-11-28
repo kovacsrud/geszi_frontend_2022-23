@@ -414,6 +414,10 @@ app.post('/kutyafajtak',(req,res)=>{
     })
 })
 ```
-## React frontend létrehozása
+## React frontend létrehozása a kutyás mini backendhez
 
+Hozzunk létre egy mappát, és adjuk hozzá a kívánt munkaterülethez. Ezt követően nyissunk hozzá terminált, hogy ki tudjuk adni a szükséges parancsokat.
+
+Hozzunk létre egy új React appot:
 **npx create-react-app .** -Ezzel az aktuálisan beállított mappába kerül a react app.
+
