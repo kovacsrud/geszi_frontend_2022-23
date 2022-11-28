@@ -443,3 +443,17 @@ root.render(
   </React.StrictMode>
 );
 ```
+
+Nyissuk meg az **App.js** fájlt. Töröljünk ki belőle mindent, csak App() függvény maradjon a következő tartalommal.
+```js
+function App() {
+	  return (
+	    <div>         
+	     <h1>Kutya frontend alkalmazás</h1>
+	    </div>
+	  );
+	}
+	
+	export default App;
+```
+
