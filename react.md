@@ -490,7 +490,7 @@ A komponens útvonalának megadása mindig relatív az App.js-hez képest.
 Az App.js render függvényében mostmár bárhol használhatjuk a Header kompnenst, mintha egy HTML tag lenne:
 ```js
 import Kutyanevek from "./components/Kutyanevek";
-	import Header from "./components/Header";
+import Header from "./components/Header";
 		
 	function App() {
 	  return (
@@ -502,5 +502,29 @@ import Kutyanevek from "./components/Kutyanevek";
 	
 export default App;
 ```
+### Adat átadása komponensnek
 
+Mi van akkor, ha nem szeretnénk a komponensbe "beleégetni" a tartalmat? Kívülről átadhatunk adatot, nagyon hasonlóan ahhoz, ahogyan egy függvénynek adunk át adatot. Ebben az esetben az App.js-ben a Header-t így használjuk:
+```js
+<Header cim={"Kutyák adatbázis"} />
+```
+A **cim** egy változó, ezzel a névvel tudjuk az adatot elérni a Header-en belül.
+
+A Header így módosul, hogy tudjuk fogadni a kapott adatot:
+```js
+function Header(props) {
+	  return (
+	    <h1>{props.cim}</h1>
+	  )
+	}
+	
+export default Header
+```
+A **props** egy olyan objektum, amelyet a React hoz létre automatikusan akkor, amikor a komponensnek valamilyen adatot adunk át. A fenti esetben a props objektumot így lehetne leírni:
+```js
+props={
+  cim:"Kutyák adatbázis"	
+}
+```
+Ha több adatot is átadunk, akkor értelemszerűen a props-ban több kulcs-érték pár van.
 
