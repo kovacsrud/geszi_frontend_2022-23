@@ -456,4 +456,6 @@ function App() {
 	
 	export default App;
 ```
+Ezzel van egy alap csupasz React alkalmazáunk, amelyet komponensek létrehozásával fogunk fejleszteni. Minden komponens a készülő weboldal valamely részletét fogja megvalósítani (fejléc, listák, navigáció, információ megjelenítése stb.)
+
 
