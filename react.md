@@ -301,6 +301,50 @@ Nyissuk meg a package.json-t keressük meg a scripts objektumot. A test kulcs é
     "start": "json-server --watch db.json --port 8000"
   }
 ```
+Készítsünk egy db.json nevű fájlt, ez fogja betölteni az adatbázis szerepét, a server ennek a fájlnak a tartalmát fogja írni ill. olvasni.
+A db.json :
+```js
+{
+	  "autok": [
+	    {
+	      "id": 1,
+	      "marka": "Skoda",
+	      "tipus": "Fabia",
+	      "rendszam": "REK-121",
+	      "kor": 19
+	    },
+	    {
+	      "id": 2,
+	      "marka": "Suzuki",
+	      "tipus": "Swift",
+	      "rendszam": "KON-321",
+	      "kor": 11
+	    },
+	    {
+	      "id": 3,
+	      "marka": "Opel",
+	      "tipus": "Astra",
+	      "rendszam": "LET-996",
+	      "kor": 8
+	    },
+	    {
+	      "marka": "Dacia",
+	      "tipus": "Sandero",
+	      "rendszam": "GLK-556",
+	      "kor": 8,
+	      "id": 4
+	    },
+	    {
+	      "marka": "Dacia",
+	      "tipus": "Logan",
+	      "rendszam": "KLK-556",
+	      "kor": 6,
+	      "id": 5
+	    }
+	  ]
+	}
+```
+
 A végpontok tesztelését valamilyen REST API eszköz segítségével (pl. POSTMAN, INSOMNIA, THUNDER CLIENT) 
 
 ## Egyszerű SQL adatbázisos backend készítése
