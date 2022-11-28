@@ -528,3 +528,14 @@ props={
 ```
 Ha több adatot is átadunk, akkor értelemszerűen a props-ban több kulcs-érték pár van.
 
+Elterjedt az a megoldás is, hogy az átküldött adatokat rögtön destruktúráljuk, ebben az esetben nem kell a props előtag.
+Adat átvétele destruktúrálással:
+```js
+function Header({cim}) {
+	  return (
+	    <h1>{cim}</h1>
+	  )
+	}
+export default Header
+```
+
