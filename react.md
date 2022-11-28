@@ -487,3 +487,20 @@ Az importálást az App.js-be írt következő paranccsal végezzük:
 import Header from "./components/Header";
 ```
 A komponens útvonalának megadása mindig relatív az App.js-hez képest.
+Az App.js render függvényében mostmár bárhol használhatjuk a Header kompnenst, mintha egy HTML tag lenne:
+```js
+import Kutyanevek from "./components/Kutyanevek";
+	import Header from "./components/Header";
+		
+	function App() {
+	  return (
+	    <div>
+	      <Header />		      	     
+	    </div>
+	  );
+	}
+	
+export default App;
+```
+
+
