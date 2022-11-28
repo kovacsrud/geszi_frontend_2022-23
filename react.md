@@ -458,4 +458,18 @@ function App() {
 ```
 Ezzel van egy alap csupasz React alkalmazáunk, amelyet komponensek létrehozásával fogunk fejleszteni. Minden komponens a készülő weboldal valamely részletét fogja megvalósítani (fejléc, listák, navigáció, információ megjelenítése stb.)
 
+### Header komponens
+Hozzunk létre az alkalmazás gyökér könyvtárában egy **components** nevű mappát, ide kerülnek majd az egyes tartalmakat előállító komponensek. A **components** mappában hozzunk létre egy **Header.js** fájlt.
+Az alap komponens így fog kinézni:
+```js
+function Header() {
+	  return (
+	    <div>Header</div>
+	  )
+	}
+export default Header
+```
+A Visual Studio Code-ban érdemes feltelepíteni a **ES7+ React/Redux/React-Native snippets** nevű kiegészítőt, ugyanis ennek segítségével le tudjuk generálni az üres komponenst és nem kell annyit gépelnünk, valamint gépelési hibákat is meg tudunk előzni a használatával. A frissen létrehozott fájlba írjuk be az **rfce** karaktereket a beírás hatására feldob a kiegészító egy listát és a megegyező nevű listaelemre ENTER-t ütve máris kész az alap komponens.
+
+
 
