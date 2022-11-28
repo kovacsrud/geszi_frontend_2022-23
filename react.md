@@ -421,9 +421,25 @@ Hozzunk létre egy mappát, és adjuk hozzá a kívánt munkaterülethez. Ezt k�
 Hozzunk létre egy új React appot:
 **npx create-react-app .** -Ezzel az aktuálisan beállított mappába kerül a react app.
 
+### Az app megtisztítása
 A telepítés után keressük meg a **public** mappát és nyissuk meg a benne lévő **index.html** fájlt. A fájl **header** részéhez adjuk hozzá a **bootstrap** hivatkozásait, hogy tudjuk használni a keretrendszer stílusait, komponenseit.
 ```html
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 ```
+Lépjünk át az **src** mappába. 
+Az index.js-ből törölhető a reportwebvitals komponens importja és futtatása, de benne is hagyható. A reportwebvitals nélkül így néz ki az index.js:
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
