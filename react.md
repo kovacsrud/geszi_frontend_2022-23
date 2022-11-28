@@ -538,4 +538,9 @@ function Header({cim}) {
 	}
 export default Header
 ```
-
+Tulajdonképpen a :
+```js
+const {cim}=props
+```
+destruktúrálást végeztük el, azaz a props objektum cim adattagját "kiemeltük" a cim változóba. 
+A továbbiakban, amikor egy komponensnek adatot, vagy adatokat adunk át ugyanezt fogjuk csinálni.
