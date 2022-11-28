@@ -471,5 +471,19 @@ export default Header
 ```
 A Visual Studio Code-ban érdemes feltelepíteni a **ES7+ React/Redux/React-Native snippets** nevű kiegészítőt, ugyanis ennek segítségével le tudjuk generálni az üres komponenst és nem kell annyit gépelnünk, valamint gépelési hibákat is meg tudunk előzni a használatával. A frissen létrehozott fájlba írjuk be az **rfce** karaktereket a beírás hatására feldob a kiegészító egy listát és a megegyező nevű listaelemre ENTER-t ütve máris kész az alap komponens.
 
+Az előzőleg létrehozott Header egy egyszerű címet fog tartalmazni. Módosítsuk a következőre:
+```js
+function Header() {
+	  return (
+	    <h1>Kutyák adatbázis</h1>
+	  )
+	}
+export default Header
+```
+Ezzel ez a komponens kész is a használatra. Menjünk vissza az App.js-be. A használathoz a Header komponenst be kell importálni, utána tudjuk használni.
 
-
+Az importálást az App.js-be írt következő paranccsal végezzük: 
+```js
+import Header from "./components/Header";
+```
+A komponens útvonalának megadása mindig relatív az App.js-hez képest.
