@@ -769,6 +769,8 @@ parancs megy végig a lista elemein és gyárt annyi példányt a KutyafajtaRend
 ## Az új kutyafajta felvitelét megvalósító komponens létrehozása
 
 Ez a komponens egy formot fog megvalósítani, melynek elemeiben a szükséges adatokat megadhatjuk. A form beviteli mezőibe írt értékeket state változókban tároljuk, küldéskor ezeknek az értékét továbbítjuk a backend felé.
+Az egyes beviteli mezők value értékéhez a state változók értékét rendeljük. A mezők változtatásakor az onChane-hez rendelt függvény mindig beállítja az adott state változóba a beviteli mező értékét.
+
 ```js
 import {useState} from 'react';
 
@@ -823,4 +825,4 @@ Az adatKuldes függvényt az onSubmit függvény hívja meg, amelyet a form onSu
     }
 
 ```
-Az onSubmit megkapja az e nevű event objektumot, majd az e.preventDefault() paranccsal megakadályozzuk, hogy oldalletöltést hajtson végre, ami egyébként a formok alapértelmezett viselkedése.
+Az onSubmit megkapja az e nevű event objektumot, majd az e.preventDefault() paranccsal megakadályozzuk, hogy oldalletöltést hajtson végre, ami egyébként a formok alapértelmezett viselkedése. Ezt követően hívja meg az onSubmit az adatKuldes függvényt.
