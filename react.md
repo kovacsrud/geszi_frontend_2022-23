@@ -758,5 +758,10 @@ function Kutyafajtak() {
 export default Kutyafajtak;
 ```
 
-
-
+A komponens egy kutyafajtak nevű state változót tartalmaz, ebbe tesszük majd a backendről letöltött adatokat. Alapértéke üres lista.
+A komponens létrejöttekor automatikusan lefutó useEffect futtatja az API hívást, itt töltjük le  a fetch segítségével az adatokat, az API megfelelő végpontját ('/kutyafajtak') meghívva.
+Ezt követően a 
+```js
+ kutyanfajtak.map((fajta,index)=>(<KutyafajtaRender key={index} fajta={fajta} />))
+```
+parancs megy végig a lista elemein és gyárt annyi példányt a KutyafajtaRender-ből, amennyi elem a listában van. A komponensnek szüksége van a key-re, amihez valami egyedi adatot kell rendelni. Ezt most a listaelemek indexe. Ezen kívül a fajta adatait tartalmazó objektumot adjuk át. 
