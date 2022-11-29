@@ -718,6 +718,20 @@ export default KutyafajtaRender;
 ```
 A KutyafajtaRender tartalmaz egy logikai típusú state változót (modosit). Ennek értékétől függ, hogy a módosító komponens látszik vagy sem. Egy kapcsol nevű függvényt írtunk a változó értékének módosítására az egyszerűbb használat végett, ebben hívjuk meg a state beállító függvényét. Az értékadással a nem logikai műveletet felhsználva az ellenkezőjére tudjuk állítani a változó értékét, úgy mintha egy kapcsolót kapcsolgatnánk.
 
-A Kutyafajta komponensnek két értéket adunk át, a listából értkező fajta objektumok, ami a fajta nevét, eredeti nevét, id-jét tartalmazza, valamint a kapcsol függvényt, amellyel ki-be kapcsolható a módosító komponens.
+A Kutyafajta komponensnek két értéket adunk át, a listából értkező fajta objektumok, ami a fajta nevét, eredeti nevét, id-jét tartalmazza, valamint a kapcsol függvényt, amellyel ki-be kapcsolható a módosító komponens. A KutyafajtaModosit-nak csak a fajta adataira van szüksége.
+
+Dolgozzuk ki a Kutyafajta komponenst is!
+
+```js
+function Kutyafajta({fajta,kapcsol}) {
+  return (
+    <div><p onClick={kapcsol}>{fajta.nev},{fajta.eredetinev}</p></div>
+  )
+}
+
+export default Kutyafajta
+```
+Átvesszük a fajta objektumot, valamint a kapcsol függvényt, itt is destruktúrálást alkalmazva. Egy bekezdésben megjelenítjük a nev és az eredetinev adatmezőket. Természetesen ennek szebb HTML-kódot is lehet készíteni...
+
 
 
