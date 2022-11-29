@@ -733,5 +733,30 @@ export default Kutyafajta
 ```
 Átvesszük a fajta objektumot, valamint a kapcsol függvényt, itt is destruktúrálást alkalmazva. Egy bekezdésben megjelenítjük a nev és az eredetinev adatmezőket. Természetesen ennek szebb HTML-kódot is lehet készíteni...
 
+Ezek után csak az adatokat letöltő és a listát feldolgozó komponenst kell elkészíteni. A neve legyen Kutyafajtak.
+```js
+import {useState,useEffect} from 'react';
+import KutyafajtaRender from './KutyafajtaRender';
+
+function Kutyafajtak() {
+    const[kutyafajtak,setKutyafajtak]=useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:8000/kutyafajtak')
+        .then(res=>res.json())
+        .then(adat=>setKutyafajtak(adat))
+        .catch(err=>console.log(err));
+    },[]);
+  return (
+    <div>
+        {
+            kutyafajtak.map((fajta,index)=>(<KutyafajtaRender key={index} fajta={fajta} />))
+        }
+    </div>
+  )
+}
+
+export default Kutyafajtak;
+```
+
 
 
