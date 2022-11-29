@@ -667,3 +667,53 @@ function Navbar() {
 
 export default Navbar
 ```
+Hozzuk létre a kutyafajták listáját megvalósító komponenseket! Az első egy adott fajta adatait megjelenítő komponens lesz, gyakorlatilag egy listaelem. Legyen a neve Kutyafajta.js. 
+Kiinduló kódja:
+```js
+function Kutyafajta() {
+  return (
+    <div>Kutyafajta</p></div>
+  )
+}
+	
+export default Kutyafajta
+```
+Hozzunk létre egy KutyafajtaModosit.js komponenst is, ennek segítségével lehet majd módosítani egy kutyafajta nevét.
+```js
+function KutyfajtaModosit() {
+  return (
+    <div>KutyfajtaModosit</div>
+  )
+}
+
+export default KutyfajtaModosit
+```
+Hozzunk létre egy harmadik komponenst, amelynek segítségével a módosítás megjelenítése ki-be kapcsolható Ez lesz a KutyafajtaRender.js. Ez a komponens feltételes renderelést alkalmaz majd, a fajta neve mindig megjelenik, a módosító komponens csak kattintás hatására.
+```js
+import Kutyafajta from "./Kutyafajta";
+import KutyfajtaModosit from "./KutyfajtaModosit";
+import {useState} from 'react';
+
+function KutyafajtaRender({fajta}) {
+    const[modosit,setModosit]=useState(false);
+    const kapcsol=()=>{
+        setModosit(prev=>!prev);
+    }
+
+  return (
+    <div>
+        {
+            !modosit ? <Kutyafajta fajta={fajta} kapcsol={kapcsol} /> 
+            :
+            <div>
+                <Kutyafajta fajta={fajta} kapcsol={kapcsol}/> 
+                <KutyfajtaModosit fajta={fajta}/>
+            </div>
+        }
+    </div>
+  )
+}
+
+export default KutyafajtaRender;
+```
+
