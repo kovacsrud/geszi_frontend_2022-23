@@ -716,4 +716,4 @@ function KutyafajtaRender({fajta}) {
 
 export default KutyafajtaRender;
 ```
-
+A KutyafajtaRender tartalmaz egy logikai típusú state változót (modosit). Ennek értékétől függ, hogy a módosító komponens látszik vagy sem. Egy kapcsol nevű függvényt írtunk a változó értékének módosítására az egyszerűbb használat végett, ebben hívjuk meg a state beállító függvényét. Az értékadással a nem logikai műveletet felhsználva az ellenkezőjére tudjuk állítani a változó értékét, úgy mintha egy kapcsolót kapcsolgatnánk.
