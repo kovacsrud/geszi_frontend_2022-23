@@ -765,3 +765,52 @@ Ezt követően a
  kutyanfajtak.map((fajta,index)=>(<KutyafajtaRender key={index} fajta={fajta} />))
 ```
 parancs megy végig a lista elemein és gyárt annyi példányt a KutyafajtaRender-ből, amennyi elem a listában van. A komponensnek szüksége van a key-re, amihez valami egyedi adatot kell rendelni. Ezt most a listaelemek indexe. Ezen kívül a fajta adatait tartalmazó objektumot adjuk át. 
+
+## Az új kutyafajta felvitelét megvalósító komponens létrehozása
+
+Ez a komponens egy formot fog megvalósítani, melynek elemeiben a szükséges adatokat megadhatjuk. A form beviteli mezőibe írt értékeket state változókban tároljuk, küldéskor ezeknek az értékét továbbítjuk a backend felé.
+```js
+import {useState} from 'react';
+
+function KutyafajtaForm() {
+    const[nev,setNev]=useState("");
+    const[eredetiNev,setEredetinev]=useState("");
+
+    const adatKuldes=async (adat)=>{
+        const response=await fetch('http://localhost:8000/kutyafajtak',{
+            method:'POST',
+            headers:{'Content-type':'application/json'},
+            body:JSON.stringify(adat)
+        });
+
+        const valasz=await response.text();
+        alert(valasz);
+
+    }
+
+    const onSubmit=(e)=>{
+        e.preventDefault();
+        adatKuldes({nev:nev,eredetinev:eredetiNev});
+    }
+
+  return (
+    <div className="container">
+       <form onSubmit={onSubmit}>
+        <div className="mb-3">
+            <label for="nev" className="form-label">Fajta neve:</label>
+            <input type="text" value={nev} onChange={(e)=>setNev(e.target.value)} className="form-control" id="nev" />
+        </div>
+        <div className="mb-3">
+            <label for="eredetinev" className="form-label">Fajta eredeti neve:</label>
+            <input type="text" value={eredetiNev} onChange={(e)=>setEredetinev(e.target.value)} className="form-control" id="eredetinev" />
+        </div>
+        <button type="submit" className="btn btn-primary">Küldés</button>
+       </form>
+    </div>
+  )
+}
+
+export default KutyafajtaForm;
+```
+
+
