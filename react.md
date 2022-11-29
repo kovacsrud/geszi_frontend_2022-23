@@ -858,6 +858,5 @@ function App() {
 }
 
 export default App;
-Footer
 
 ```
