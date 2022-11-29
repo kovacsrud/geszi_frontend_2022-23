@@ -812,5 +812,15 @@ function KutyafajtaForm() {
 
 export default KutyafajtaForm;
 ```
+A két state mellett két függvény is van. Az adatKuldes függvény valósítja meg az adatok továbbítását a backend felé egy fetch parancs futtatásával. Mivel adatküldésről van szó, a fetch-ben meg kell adni a küldés metódusát (method:"POST"), a szükséges fejlécet (headers:{'Content-type':'application/json'}), valamint a küldeni kívánt adatot (body:JSON.stringify(adat)).
 
+Az adatKuldes függvényt az onSubmit függvény hívja meg, amelyet a form onSubmit eseményéhez rendelünk.
 
+```js
+ const onSubmit=(e)=>{
+        e.preventDefault();
+        adatKuldes({nev:nev,eredetinev:eredetiNev});
+    }
+
+```
+Az onSubmit megkapja az e nevű event objektumot, majd az e.preventDefault() paranccsal megakadályozzuk, hogy oldalletöltést hajtson végre, ami egyébként a formok alapértelmezett viselkedése.
