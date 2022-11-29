@@ -569,3 +569,23 @@ A komponensünk alapja a Bootstrap keretrendszer felhasználható komponensei k�
   </div>
 </nav>
 ```
+Ezt alakítjuk át úgy, hogy igazodjon az oldalunk igényeihez. Az **a** html elemeket **Link**-re fogjuk cserélni. A **Link** elemekkel az App.js ben definiált útvonalak valamelyikére tudunk navigálni.
+
+Menjünk az App.js-be és importáljuk be a szükséges funkciókat, valamint hozzuk létre az útvonalakat!
+
+Az importálás parancsa:
+```js
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+```
+Három útvonalat hozunk létre. Egy a főoldalnak ('/'), egyet a kutyafajták listájának ('/kutyafajtak'), egyet pedig az új kutyanév felvitelének ('/ujkutyafajta'). 
+
+Hozzunk létre egy új komponenst a components **Fooldal.js** névvel, ez fogja képviselni a főoldalt, bár most nem teszünk bele különösebb tartalmat.
+```js
+function Fooldal() {
+  return (
+    <h2>Üdvözli az állatorvosi rendelő!</h2>
+  )
+}
+	
+export default Fooldal
+```
