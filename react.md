@@ -846,7 +846,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Fooldal />} />
-          <Route path="/kutyafajtak" element={<Kutyanfajtak />} />
+          <Route path="/kutyafajtak" element={<Kutyafajtak />} />
 	  <Route path="/ujkutyafajta" element={<KutyafajtaForm />} />
 
         </Routes>
