@@ -544,3 +544,28 @@ const {cim}=props
 ```
 destruktúrálást végeztük el, azaz a props objektum cim adattagját "kiemeltük" a cim változóba. 
 A továbbiakban, amikor egy komponensnek adatot, vagy adatokat adunk át ugyanezt fogjuk csinálni.
+
+## Navigációs komponens készítése
+
+Minden webalkalmazás alkalmaz navigációt. Ennek megvalósítása nagyon sokféle lehet, kattintható képek, szövegek, menük stb. A React alkalmazások navigációja során gyakorlatilag komponensek között váltogatunk, hiszen oldalletöltés csak egyszer történik. 
+Amennyiben React alkalmazásban szeretnénk navigációt megvalósítani, akkor fel kell telepítenünk a **react-router-dom** csomagot. A telepítés parancsa: **npm install react-router-dom**.
+
+A komponensünk alapja a Bootstrap keretrendszer felhasználható komponensei közül a Navbar, annak is a legegyszerűbb verziója, aminek HTML kódja a következő:
+```HTML
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
+```
