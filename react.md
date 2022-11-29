@@ -622,7 +622,7 @@ Footer
 Látszik, hogy a '/' útvonalhoz a Fooldal komponens tartozik, amit előzőleg beimportáltunk az App.js-be. A navigáció felépítése általánosságban a következő:
 ```js
  <Router>
-        <Navbar />
+        
         <Routes>
           <Route path="/" element={<Fooldal />} />
           <Route path="/utvonal1" element={<Komponens1 />} />
@@ -630,5 +630,7 @@ Látszik, hogy a '/' útvonalhoz a Fooldal komponens tartozik, amit előzőleg b
 	  ...
 
         </Routes>
-      </Router>
+</Router>
 ```
+A Routes tagon belül csak Route tagok lehetnek. A Router tagon belülre tehetünk olyan komponenseket, amelyek részt vesznek a navigációban, de külön útvonal nem tartozik hozzájuk.
+
