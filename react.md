@@ -634,3 +634,36 @@ Látszik, hogy a '/' útvonalhoz a Fooldal komponens tartozik, amit előzőleg b
 ```
 A Routes tagon belül csak Route tagok lehetnek. A Router tagon belülre tehetünk olyan komponenseket, amelyek részt vesznek a navigációban, de külön útvonal nem tartozik hozzájuk.
 
+Alakítsuk ki a Navbar komponenst! Az előbb létrehozott komponensben a **return** függvénybe másoljuk be azt a html kódot, amelyikkel megvalósítjuk a navigációt. Az a tageket Link re cseréljük, a class-okat nevezzük át className-re!
+
+Importáljuk be a Link parancsot:
+```js
+import {Link} from 'react-router-dom';
+```
+Így fog kinézni a Navbar:
+```js
+import {Link} from 'react-router-dom';
+
+function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg bg-light">
+  <div className="container-fluid">
+    <h3>Rendelő</h3>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-	          controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <Link to='/' className="nav-link" >Főoldal</Link>
+        <Link className="nav-link" >Kutyanevek</Link>
+        <Link to='/kutyafajtak' className="nav-link" >Kutyafajták</Link>
+        <Link to='/ujkutyafajta' className="nav-link" >Új fajta felvitele</Link>
+      </div>
+    </div>
+  </div>
+</nav>
+  )
+}
+
+export default Navbar
+```
