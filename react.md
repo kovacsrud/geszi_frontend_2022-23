@@ -589,3 +589,46 @@ function Fooldal() {
 	
 export default Fooldal
 ```
+Hozzuk létre az App.js-ben a navigációt. Az App.js így fog kinézni:
+```js
+
+import Header from "./components/Header";
+import Fooldal from "./components/Fooldal";
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Router>
+        
+        <Routes>
+          <Route path="/" element={<Fooldal />} />
+          <Route path="/kutyafajtak"   />
+          <Route path="/ujkutyafajta"  />
+
+        </Routes>
+      </Router>
+      
+     
+    </div>
+  );
+}
+
+export default App;
+Footer
+
+```
+Látszik, hogy a '/' útvonalhoz a Fooldal komponens tartozik, amit előzőleg beimportáltunk az App.js-be. A navigáció felépítése általánosságban a következő:
+```js
+ <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Fooldal />} />
+          <Route path="/utvonal1" element={<Komponens1 />} />
+          <Route path="/utvonal2" element={<Komponens2 />} />
+	  ...
+
+        </Routes>
+      </Router>
+```
