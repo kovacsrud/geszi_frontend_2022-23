@@ -1,4 +1,4 @@
-import Kutyanevek from "./components/Kutyanevek";
+import Kutyafajtak from "./components/Kutyafajtak";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Fooldal from "./components/Fooldal";
@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Fooldal />} />
-          <Route path="/kutyafajtak" element={<Kutyanevek />} />
+          <Route path="/kutyafajtak" element={<Kutyafajtak />} />
           <Route path="/ujkutyafajta" element={<KutyafajtaForm />} />
 
         </Routes>
