@@ -14,6 +14,8 @@ function Navbar() {
         <Link className="nav-link" >Kutyanevek</Link>
         <Link to='/kutyafajtak' className="nav-link" >Kutyafajták</Link>
         <Link to='/ujkutyafajta' className="nav-link" >Új fajta felvitele</Link>
+        <Link to='/kutyak' className="nav-link" >Rendelési adatok</Link>
+        <Link to='/ujkutya' className="nav-link" >Új rendelési adat felvitele</Link>
       </div>
     </div>
   </div>
