@@ -76,5 +76,12 @@ Ezt követően telepítjük a daisyui csomagot, amely sok előre gyártott eleme
 }
  ```
    
+## React alkalmazás létrehozása a Vite tool segítségével
 
+A Vite egy rendkívül hasznos eszköz, amellyel számos webalkalmazást létrehozhatunk, nem csak React, hanem Vue vagy egyéb más alkalmazásokat.
+Az Vite weboldalán megtaláljuk a telepítés lépéseit,  látogassunk el oda <a href="https://vitejs.dev/guide/" target="_blank">Vite</a>
+
+ - Adjuk ki a következő parancsot: **npm create vite@latest**
+ - Pár kérdést fog a Vite feltenni, az első a projekt neve. Ha valamilyen nevet beírunk, akkor létrehoz egy ilyen nevű almappát, és abba telepít. Ha ezt nem akarjuk, akkor egy pontot **.** írjunk be.
+ - 
 
