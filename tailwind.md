@@ -61,7 +61,20 @@ function App() {
 export default App;
 ```
 Ezt követően telepítjük a daisyui csomagot, amely sok előre gyártott elemet biztosít az oldal építéséhez (card, menük, form elemek stb.)
- - Töltsük be a csomag weboldalát:<a href="https://https://daisyui.com/" target="_blank">DaisyUI</a>
+ - Töltsük be a csomag weboldalát: <a href="https://https://daisyui.com/" target="_blank">DaisyUI</a>
+ - Telepítsük az **npm install daisyui** paranccsal
+ - Nyissuk meg a **tailwind.config.js** fájlt
+ - A plugins-nál írjuk be a szögletes zárójelek közé:**require("daisyui")**
+ ```js
+ /** @type {import('tailwindcss').Config} */
+ module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("daisyui")],
+}
+ ```
    
 
 
