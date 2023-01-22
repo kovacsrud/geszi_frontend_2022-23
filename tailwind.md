@@ -10,8 +10,19 @@ Alakítsuk ki a kívánt mappaszerkezetet, nyissunk terminált a mappához, amel
  - A telepítés lépései itt olvashatóak:<a href="https://tailwindcss.com/docs/installation/using-postcss" target="_blank">Tailwind telepítés</a>. 
  
  Nézzük mit is kell csinálni:
- - Adjuk ki a következő két parancsot:**npm install -D tailwindcss postcss autoprefixer** majd **npx tailwindcss init**
- - 
+ - Adjuk ki a következő két parancsot: **npm install -D tailwindcss postcss autoprefixer**  majd  **npx tailwindcss init**
+ - Hozzunk létre egy **postcss.config.js** nevű fájlt
+ - Ebbe a fájlba másoljuk be a következőket:
+ 
+ ```js
+ module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+```
+
   
    
 
