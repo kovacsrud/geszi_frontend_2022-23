@@ -60,7 +60,8 @@ function App() {
 
 export default App;
 ```
-
+Ezt követően telepítjük a daisyui csomagot, amely sok előre gyártott elemet biztosít az oldal építéséhez (card, menük, form elemek stb.)
+ - Töltsük be a csomag weboldalát:<a href="https://https://daisyui.com/" target="_blank">DaisyUI</a>
    
 
 
