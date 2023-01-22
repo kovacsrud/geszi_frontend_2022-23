@@ -94,7 +94,9 @@ Eltérést fogunk tapasztalni a két app között az appok méretében és a fej
 
 ### Tailwind CSS konfigurálása az appban
 
-A telepítés lépései nagyon hasonlítanak. A Tailwind oldalán külön leírást találunk, fontos, hogy ezt kövessük és ne az alapot, mert egyébként nem fog működni.
+A telepítés lépései nagyon hasonlítanak. A Tailwind oldalán külön leírást találunk, fontos, hogy ezt kövessük és ne az alapot, mert egyébként nem fog működni. A leírás: <a href="https://tailwindcss.com/docs/guides/vite#react" target="_blank">Tailwind konfig Vite-al létrehozott react appnál</a>
+
+
 
 
  
