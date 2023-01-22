@@ -124,6 +124,11 @@ module.exports = {
   plugins: [],
 }
 ```
-
- 
+Ezek után takarítsuk ki az alkalmazást. Nyissuk meg az index.css-t és az app.css-t és töröljük ki a tartalmukat.
+Az index.css-be tegyük bele a következőket:
+```js
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
