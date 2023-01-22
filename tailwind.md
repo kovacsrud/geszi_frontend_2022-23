@@ -137,4 +137,4 @@ Az app.jsx-ből is töröljük ki a minta kódot és az importokat, és tesztelj
       <h1 className="text-5xl font-bold text-center">Tailwind CSS használata</h1>     
 </div>
 ```
-
+Telepítsük itt is a daisyui-t! A telepítés módja ugyanaz, mint a másik app esetében.
