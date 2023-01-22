@@ -36,6 +36,13 @@ Alakítsuk ki a kívánt mappaszerkezetet, nyissunk terminált a mappához, amel
 }
 
  ```
+  - Nyissuk meg az **index.css** fájlt, töröljük a tartalmát, majd másoljuk bele a következőket:
+  
+  ```js
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  ```
   
    
 
