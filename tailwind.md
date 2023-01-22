@@ -89,5 +89,9 @@ Az Vite weboldalán megtaláljuk a telepítés lépéseit,  látogassunk el oda 
  Ezek után az eszköz legenerálja a projekt fájljait. Ahhoz, hogy a szükséges csomagok is telepítésre kerüljenek, adjuk ki az **npm install** parancsot.
  A projekt az **npm run dev** paranccsal indítható.
  
+A hagyományos React apphoz képest láthatunk néhány apróbb eltérést az app felépítésében. Az **index.html** nem a **public** mappában van, illetve a fájlok kiterjesztése **.js** helyett **.jsx**. A(z) **src** mappa ugyanúgy megtalálható. 
+Eltérést fogunk tapasztalni a két app között az appok méretében és a fejlesztő környezet sebességében is, mindkettőt a Vite javára. A hagyományos react app mérete ~200 Mb, a Vite-al létrehozott ~35 Mb.
+
+ 
  
 
