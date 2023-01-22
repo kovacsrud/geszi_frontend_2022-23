@@ -43,7 +43,24 @@ Alakítsuk ki a kívánt mappaszerkezetet, nyissunk terminált a mappához, amel
   @tailwind components;
   @tailwind utilities;
   ```
-  
+   - Tisztítsuk ki a react appunkat a felesleges dolgoktól (index.js, app.js)
+   - Teszteljük az alkalmazást a következő kóddal:
+
+```js
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold">Tailwind CSS használata</h1>
+      
+    </div>
+  );
+}
+
+export default App;
+```
+
    
 
 
