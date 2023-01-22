@@ -131,4 +131,10 @@ Az index.css-be tegyük bele a következőket:
 @tailwind components;
 @tailwind utilities;
 ```
+Az app.jsx-ből is töröljük ki a minta kódot és az importokat, és teszteljük a következővel:
+```js
+<div>
+      <h1 className="text-5xl font-bold text-center">Tailwind CSS használata</h1>     
+</div>
+```
 
