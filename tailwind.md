@@ -101,6 +101,29 @@ A következők:
  - **npm install -D tailwindcss postcss autoprefixer**
  - **npx tailwindcss init -p**
 
+Az **npx tailwindcss init -p** hatására létrejön két konfigurációs fájl. Megfigyelhetjük, hogy a kiterjesztésük eltér a másik appban használt fájlokétól (*.cjs)
+
+A **tailwind.config.cjs** fájlban módosítsuk a content sort a következővel:
+```js
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+```
+A fájl így néz ki ezek után:
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
  
 
