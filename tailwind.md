@@ -22,7 +22,20 @@ Alakítsuk ki a kívánt mappaszerkezetet, nyissunk terminált a mappához, amel
   }
 }
 ```
+ - Nyissuk meg a **tailwind.config.js** fájlt!
+ - A content:[] sorba a szögletes zárójelek közé írjuk be:**"./src/**/*.{html,js}"**
+ 
+ ```js
+ /** @type {import('tailwindcss').Config} */
+ module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 
+ ```
   
    
 
