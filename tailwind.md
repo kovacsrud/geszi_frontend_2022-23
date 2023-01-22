@@ -52,7 +52,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold">Tailwind CSS használata</h1>
+      <h1 className="text-5xl text-center font-bold">Tailwind CSS használata</h1>
       
     </div>
   );
