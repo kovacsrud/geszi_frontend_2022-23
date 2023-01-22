@@ -92,6 +92,10 @@ Az Vite weboldalán megtaláljuk a telepítés lépéseit,  látogassunk el oda 
 A hagyományos React apphoz képest láthatunk néhány apróbb eltérést az app felépítésében. Az **index.html** nem a **public** mappában van, illetve a fájlok kiterjesztése **.js** helyett **.jsx**. A(z) **src** mappa ugyanúgy megtalálható. 
 Eltérést fogunk tapasztalni a két app között az appok méretében és a fejlesztő környezet sebességében is, mindkettőt a Vite javára. A hagyományos react app mérete ~200 Mb, a Vite-al létrehozott ~35 Mb.
 
- 
+### Tailwind CSS konfigurálása az appban
+
+A telepítés lépései nagyon hasonlítanak. A Tailwind oldalán külön leírást találunk, fontos, hogy ezt kövessük és ne az alapot, mert egyébként nem fog működni.
+
+
  
 
