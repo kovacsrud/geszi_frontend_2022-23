@@ -6,6 +6,6 @@ Két fajta react alkalmazásban nézzük meg a Tailwind beállítását. Az egyi
 
 Alakítsuk ki a kívánt mappaszerkezetet, nyissunk terminált a mappához, amelybe telepíteni kívánjuk az alkalmazást.
  - Adjuk ki a terminálban az **npx create-react-app .** parancsot
- - Keressük fel a Tailwind oldalát <a href="<a href="http://tailwindcss.com/" target="_blank">Hello, world!</a>
+ - Keressük fel a Tailwind oldalát: <a href="http://tailwindcss.com/" target="_blank">Tailwind CSS</a>
 
 
