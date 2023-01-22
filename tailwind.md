@@ -83,5 +83,11 @@ Az Vite weboldalán megtaláljuk a telepítés lépéseit,  látogassunk el oda 
 
  - Adjuk ki a következő parancsot: **npm create vite@latest**
  - Pár kérdést fog a Vite feltenni, az első a projekt neve. Ha valamilyen nevet beírunk, akkor létrehoz egy ilyen nevű almappát, és abba telepít. Ha ezt nem akarjuk, akkor egy pontot **.** írjunk be.
- - 
+ - Ezután egy menüből választhatunk, hogy milyen projektet szeretnénk, válasszuk a React-et.
+ - Nyelvet választhatunk a következő menüben, válasszuk a Javascript-et.
+ 
+ Ezek után az eszköz legenerálja a projekt fájljait. Ahhoz, hogy a szükséges csomagok is telepítésre kerüljenek, adjuk ki az **npm install** parancsot.
+ A projekt az **npm run dev** paranccsal indítható.
+ 
+ 
 
