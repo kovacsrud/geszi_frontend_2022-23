@@ -96,7 +96,10 @@ Eltérést fogunk tapasztalni a két app között az appok méretében és a fej
 
 A telepítés lépései nagyon hasonlítanak. A Tailwind oldalán külön leírást találunk, fontos, hogy ezt kövessük és ne az alapot, mert egyébként nem fog működni. A leírás: <a href="https://tailwindcss.com/docs/guides/vite#react" target="_blank">Tailwind konfig Vite-al létrehozott react appnál</a>
 
-
+Az első lépést, az app létrehozását már megcsináltuk
+A következők:
+ - **npm install -D tailwindcss postcss autoprefixer**
+ - **npx tailwindcss init -p**
 
 
  
