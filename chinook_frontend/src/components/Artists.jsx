@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
+import { useNavigate,Link } from "react-router-dom";
 
 function Artists() {
+    const navigate=useNavigate();
     const [artists,setArtists]=useState([]);
 
     const letolt=async ()=>{
@@ -29,7 +31,7 @@ function Artists() {
             
             artists.map((artist,i)=>(<div key={i} className="badge badge-info gap-2 text-xl p-2 m-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            {artist.Name}
+            {artist.ArtistId}<Link to="/newartist" state={artist.Name}>{artist.Name}</Link>
           </div>))
             
         }

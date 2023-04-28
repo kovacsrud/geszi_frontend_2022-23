@@ -10,6 +10,8 @@ function Menu() {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to={"/artists"}>Előadók</Link></li>
                     <li><Link to={"/albums"}>Albumok</Link></li>
+                    <li><Link to={"/newartist"}>Új előadó felvétele</Link></li>
+                    <li><Link to={"/newalbum"}>Új album felvétele</Link></li>
                 </ul>
             </div>
         </div>

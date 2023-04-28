@@ -70,6 +70,24 @@ app.post('/artist',(req,res)=>{
 
 })
 
+app.post('/album',(req,res)=>{
+    const{title,artistId}=req.body;
+    db.run("insert into albums (Title,ArtistId) values(?,?)"
+    ,[title,artistId]
+    ,function (error){
+        if(error){
+            res.status(400).json(error.message);
+        }
+        console.log(this.lastID);
+      
+        res.status(201).json({message:"Beszúrás rendben "+this.lastID});
+        
+
+    });
+
+
+})
+
 app.delete('/genres/:id',(req,res)=>{
     const id=req.params.id;
     db.run("delete from genres where GenreId=?"
